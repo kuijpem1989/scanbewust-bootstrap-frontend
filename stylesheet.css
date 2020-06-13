@@ -3,7 +3,22 @@ body {
     font-family: 'Roboto', sans-serif;
     color: white;
 }
-h1 {
-    font-size: 68px;
-    padding-top: 20px;
+.padding-default {
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+.button {
+    background-color: #E5E338;
+    border: none;
+    padding: 15px 25px;
+    transition-duration: 0.4s;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+.button:hover {
+    background: white;
+    color: black;
+}
+.formProduct {
+    background: linear-gradient(to bottom right, #EC576B 5%, #c4273c 100%);
 }

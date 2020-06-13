@@ -22,11 +22,40 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-sm text-center">
-            <h1>Scan Bewust</h1>
+        <div class="col-sm d-flex justify-content-center padding-default">
+            <img src="afbeeldingen/logo.png" class="img-fluid" height="20%"  width="20%" alt="Scan Bewust">
         </div>
     </div>
-</div>
+    <div class="row">
+            <div class="content col-sm-3">
+                &nbsp;
+            </div>
+            <div class="content col-sm-6">
+                <div class="card rounded formProduct">
+                    <div class="card-body">
+                        <form>
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="ean" name="ean" placeholder="Barcode / EAN">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="naam" name="naam" placeholder="Naam">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="beschrijving" name="beschrijving" placeholder="Beschrijving">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="voetafdruk" name="voetafdruk" placeholder="Voetafdruk">
+                            </div>
+                            <button type="submit" class="button">Voeg product toe</button>
+                        </form>
+                    </div>
+                </div>        
+            </div>
+            <div class="content col-sm-3">
+                &nbsp;
+            </div>
+        </div>
+    </div>
 
 <!-- Bootstrap import JS -->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
