@@ -1,3 +1,17 @@
+<?php
+
+require 'Product.php';
+
+// checken op form requesten 
+if($_SERVER["REQUEST_METHOD"] === "POST") {
+    // check met de User class of er een create is gedaan
+    if(Product::postProduct($_POST['ean'], $_POST['naam'], $_POST['beschrijving'], $_POST['voetafdruk'])) {
+        exit;
+    }
+}
+
+?>
+
 <!DOCTYPE html>
 
 <html>
@@ -33,7 +47,7 @@
             <div class="content col-sm-6">
                 <div class="card rounded formProduct">
                     <div class="card-body">
-                        <form>
+                        <form method="post">
                             <div class="form-group">
                                 <input type="text" class="form-control" id="ean" name="ean" placeholder="Barcode / EAN">
                             </div>
