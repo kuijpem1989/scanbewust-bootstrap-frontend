@@ -13,12 +13,12 @@ class Product {
         $plu = false;
 
         // url voor naar de REST API
-        $url = "http://f24b023cd995.ngrok.io/restapi/v1/producten";
+        $url = "http://b98c7f721f6b.ngrok.io/restapi/v1/producten";
 
-        //Initiate cURL.
+        // init the curl
         $ch = curl_init($url);
 
-        // Setup request to send json via POST
+        // Setup request voor de JSON
         $data = array(
             'ean' => $ean,
             'naam' => $naam,
@@ -28,6 +28,12 @@ class Product {
         );
         //Encode the array into JSON.
         $jsonDataEncoded = json_encode($data);
+
+        // om de response van de post te vangen
+        $optArray = array(
+            CURLOPT_RETURNTRANSFER => true
+        );
+        curl_setopt_array($ch, $optArray);
         
         //Tell cURL that we want to send a POST request.
         curl_setopt($ch, CURLOPT_POST, 1);
@@ -38,7 +44,7 @@ class Product {
         //Set the content type to application/json
         curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json')); 
         
-        //Execute the request
+        // Voer het request uit
         $result = curl_exec($ch);
     }
 }

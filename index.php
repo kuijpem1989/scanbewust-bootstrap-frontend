@@ -8,6 +8,8 @@ if($_SERVER["REQUEST_METHOD"] === "POST") {
     if(Product::postProduct($_POST['ean'], $_POST['naam'], $_POST['beschrijving'], $_POST['voetafdruk'])) {
         exit;
     }
+    // vul bericht met naam van het product
+    $msg = "Product ".$_POST['naam']." aangemaakt.";
 }
 
 ?>
@@ -37,7 +39,21 @@ if($_SERVER["REQUEST_METHOD"] === "POST") {
 <div class="container">
     <div class="row">
         <div class="col-sm d-flex justify-content-center padding-default">
-            <img src="afbeeldingen/logo.png" class="img-fluid" height="20%"  width="20%" alt="Scan Bewust">
+            <img src="afbeeldingen/logo.png" class="img-fluid" height="15%"  width="15%" alt="Scan Bewust">
+        </div>
+    </div>
+    <div class="row">
+        <div class="content col-sm-3">
+            &nbsp;
+        </div>
+        <div class="col-sm-6 d-flex padding-default">
+            <p class="text-center">
+                Help ons mee producten toe te voegen, zodat de mobiele applicatie meer data heeft.
+                Hiermee hopen wij bij te dragen aan het SDG doel nummer 12.
+            </p>
+        </div>
+        <div class="content col-sm-3">
+            &nbsp;
         </div>
     </div>
     <div class="row">
@@ -67,6 +83,14 @@ if($_SERVER["REQUEST_METHOD"] === "POST") {
             </div>
             <div class="content col-sm-3">
                 &nbsp;
+            </div>
+        </div>
+        <!-- bericht als product is gepost -->
+        <div class="row">
+            <div class="col-sm-12 title-custom-1">
+                <?php if(!empty($msg)) : ?>
+                    <br><p class="alert alert-success text-center"> <?= $msg ?></p>
+                <?php endif; ?>
             </div>
         </div>
     </div>

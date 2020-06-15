@@ -1,5 +1,5 @@
 body {
-    background-color: #4EC5C1;
+    background: linear-gradient(to bottom right, #4EC5C1 5%, #14bab4 100%);
     font-family: 'Roboto', sans-serif;
     color: white;
 }
@@ -20,5 +20,6 @@ body {
     color: black;
 }
 .formProduct {
-    background: linear-gradient(to bottom right, #EC576B 5%, #c4273c 100%);
+    background: linear-gradient(to bottom right, #EC576B 5%, #910f22 100%);
+    box-shadow: 5px 10px 10px 0 rgba(0,0,0,0.2);
 }
